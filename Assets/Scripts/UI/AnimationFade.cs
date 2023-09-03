@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
@@ -12,14 +11,7 @@ public class AnimationFade : MonoBehaviour
 
     private int _delay = 2;
 
-    void Start()
-    {
-       
-          
-    }
-
-    
-    void Update()
+    private void Update()
     {
         if (_oneShotPlayAnimation)
         {  
@@ -30,6 +22,12 @@ public class AnimationFade : MonoBehaviour
         {
             _hintText.color = new Color(_hintText.color.r, _hintText.color.g, _hintText.color.b, Mathf.PingPong(Time.time / _speedAnimation, 1.0f));
         } 
+    }
+
+    public void Close()
+    {
+        _hintText.color = new Color(_hintText.color.r, _hintText.color.g, _hintText.color.b, 0f);
+        gameObject.SetActive(false);
     }
 
 
