@@ -7,9 +7,13 @@ public class EntrePointMainMenu : MonoBehaviour
     [SerializeField] private CloseUI _closeUI;
     [SerializeField] private DetectsClicks _detectsClicks;
     [SerializeField] private AnimationFade _animationFade;
+    [SerializeField] private GameController _gameController;
+    [SerializeField] private StartGames _startGames;
+    
 
     private void Start()
     {
         _detectsClicks.Initialization(_closeUI, _animationFade);
+        _closeUI.Initialization(_startGames);
     }
 }
