@@ -6,8 +6,10 @@ public class CloseUI : MonoBehaviour
 {
     [SerializeField] private Animator[] _closeAnimation;
     [SerializeField] private string[] _nameAnimationClose;
+    [SerializeField] private float _speedAmimation;
 
     private StartGames _startGames;
+    private float i;
 
     public void Initialization(StartGames startGames)
     {
@@ -24,7 +26,7 @@ public class CloseUI : MonoBehaviour
             }
             else if (_nameAnimationClose[i] == "startGames")
             {
-                _startGames.StateGame(true);
+                StartCoroutine("SpeedAnimaton");
             }
             else
             {
@@ -32,5 +34,11 @@ public class CloseUI : MonoBehaviour
             }
             
         }
+    }
+
+    IEnumerator SpeedAnimaton()
+    {
+        yield return new WaitForSeconds(_speedAmimation);
+        _startGames.StateGame(true);
     }
 }

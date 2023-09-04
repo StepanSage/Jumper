@@ -171,7 +171,7 @@ MonoBehaviour:
   _detectsClicks: {fileID: 1879812764}
   _animationFade: {fileID: 1246784211}
   _gameController: {fileID: 998983595}
-  _startGames: {fileID: 0}
+  _startGames: {fileID: 987594358}
 --- !u!1 &174313246
 GameObject:
   m_ObjectHideFlags: 0
@@ -738,7 +738,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &878334098
 RectTransform:
   m_ObjectHideFlags: 0
@@ -888,13 +888,14 @@ GameObject:
   - component: {fileID: 987594356}
   - component: {fileID: 987594355}
   - component: {fileID: 987594357}
+  - component: {fileID: 987594358}
   m_Layer: 5
   m_Name: PlayGameButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &987594354
 RectTransform:
   m_ObjectHideFlags: 0
@@ -973,6 +974,19 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &987594358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 987594353}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d344541e4b2cb149897b81295a7b990, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _startGame: {fileID: 998983593}
 --- !u!1 &998983593
 GameObject:
   m_ObjectHideFlags: 0
@@ -989,7 +1003,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &998983594
 Transform:
   m_ObjectHideFlags: 0
@@ -1036,7 +1050,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1005697670
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1421,7 +1435,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1246784207
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2348,7 +2362,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1745833305}
   - component: {fileID: 1745833306}
-  - component: {fileID: 1745833307}
   m_Layer: 0
   m_Name: Location
   m_TagString: Untagged
@@ -2402,19 +2415,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &1745833307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1745833304}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6d344541e4b2cb149897b81295a7b990, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _startGame: {fileID: 0}
 --- !u!1 &1783839822
 GameObject:
   m_ObjectHideFlags: 0
@@ -2501,7 +2501,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1879812761
 Transform:
   m_ObjectHideFlags: 0
@@ -2671,7 +2671,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2063555303
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2712,7 +2712,8 @@ MonoBehaviour:
   - CloseLineMenu
   - CloseLogoGame
   - '-'
-  - '-'
+  - startGames
+  _speedAmimation: 1.2
 --- !u!1 &2088793833
 GameObject:
   m_ObjectHideFlags: 0
