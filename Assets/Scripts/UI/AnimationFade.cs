@@ -2,7 +2,7 @@ using System.Collections;
 using TMPro;
 using UnityEngine;
 
-public class AnimationFade : MonoBehaviour
+public class AnimationFade : MonoBehaviour, IServiceLocator
 {
     [SerializeField] private TMP_Text _hintText;
     [Range(0,5f)]

@@ -1,8 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class CloseUI : MonoBehaviour
+public class CloseUI : MonoBehaviour, IServiceLocator
 {
     [SerializeField] private Animator[] _closeAnimation;
     [SerializeField] private string[] _nameAnimationClose;
@@ -11,9 +10,9 @@ public class CloseUI : MonoBehaviour
     private StartGames _startGames;
     private float i;
 
-    public void Initialization(StartGames startGames)
+    private void Start()
     {
-        _startGames = startGames;
+        _startGames = ServiceLocator.current.Get<StartGames>();
     }
 
     public void CloseUIAnimation()

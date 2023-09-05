@@ -5,10 +5,10 @@ public class DetectsClicks : MonoBehaviour
     private CloseUI _clouseUI;
     private AnimationFade _animationFade;
 
-    public void Initialization(CloseUI closeUI, AnimationFade animationFade)
+    private void Start()
     {
-        _clouseUI = closeUI;
-        _animationFade = animationFade;
+        _clouseUI = ServiceLocator.current.Get<CloseUI>();
+        _animationFade = ServiceLocator.current.Get<AnimationFade>();
     }
     private void OnMouseDown()
     {

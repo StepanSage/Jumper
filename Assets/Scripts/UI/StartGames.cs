@@ -1,21 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class StartGames : MonoBehaviour
+public class StartGames : MonoBehaviour, IServiceLocator
 {
     [SerializeField] private GameObject _startGame;
-    public void Initialization()
-    {
-       
-    }
 
     public void StateGame(bool state)
     {
       _startGame.SetActive(state);
     }
-
-
-
-
 }
